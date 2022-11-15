@@ -40,10 +40,14 @@
     </div>
 
     <script>
+      // Initialize service socket
       const socket = io();
 
+      // Receive the messages
+      // and execute the function provided in the second parameter
       socket.on("message", addMessages);
 
+      // function that receives the message and rederizes it in the html
       function addMessages(newMessage) {
         const element = document.getElementById("messages");
         const message = document.createElement("p");
@@ -51,6 +55,7 @@
         element.appendChild(message)
       }
 
+      // function that when captured a click is executed
       function sendMessage() {
         const input = document.getElementById("message");
         const message = {
@@ -61,6 +66,7 @@
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');
 
+        // access the method provided in the java api
         fetch("http://localhost:8080/chat_spring", {
           method: "POST",
           headers: headers,

@@ -15,6 +15,7 @@ public class Application {
 
 	public static void main(String[] args) {
 
+		// Initializes the application and allows using the jframe
 		SpringApplicationBuilder builder = new SpringApplicationBuilder(Application.class);
 		builder.headless(false);
 		ConfigurableApplicationContext context = builder.run(args);

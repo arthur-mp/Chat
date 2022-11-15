@@ -61,6 +61,10 @@ public class Window  implements ActionListener {
         fieldChat.setText(text);
     }
 
+    /*
+    * Function that is executed from an event
+    * send the message to the js api
+    */
     @Override
     public void actionPerformed(ActionEvent e) {
         Message message = new Message();

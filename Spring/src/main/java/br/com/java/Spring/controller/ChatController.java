@@ -13,6 +13,9 @@ public class ChatController {
 
     private  final Window window;
 
+    /*
+    * Route java
+    */
     @PostMapping()
     @ResponseStatus(HttpStatus.OK)
     public void receiveMessage(@RequestBody Message message){
